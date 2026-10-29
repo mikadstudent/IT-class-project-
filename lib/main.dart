@@ -1,1 +1,23 @@
-
+import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
+ 
+void main() {
+  runApp(const SchedulerApp());
+}
+ 
+class SchedulerApp extends StatelessWidget {
+  const SchedulerApp({super.key});
+ 
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Scheduler',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigo),
+        useMaterial3: true,
+      ),
+      home: const HomeScreen(),
+    );
+  }
+}
